@@ -1,0 +1,11 @@
+version: '3'
+services:
+  angular:
+    build: ./docker/node
+    image: angular_image
+    container_name: angular_container
+    tty: true
+    volumes:
+      - .:/app
+    ports:
+      - "4200:4200"
